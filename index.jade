@@ -1,0 +1,35 @@
+link(
+  href='http://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet'
+  type='text/css'
+)
+
+div(id='container')
+  div(id='display')
+    div(class='header')
+      h1 the <span class='little'>t</span>Witching Hour
+    
+    div(id="tabs")
+      ul(class='nav nav-tabs' role='tablist')
+        li(class='active')
+          a(href='#all' role='tab' data-toggle='tab')
+            | All
+        li
+          a(href='#online' role='tab' data-toggle='tab')
+            | Online
+        li
+          a(href='#offline' role='tab' data-toggle='tab')
+            | Offline
+
+    div(class='tab-content')
+      div(class='search-container inner-addon left-addon')
+        i(class='glyphicon glyphicon-search')
+        input(type='text', class='search')
+      div(id='all' role='tabpanel' class='tab-pane active')
+        ul
+
+      div(id='online' role='tabpanel' class='tab-pane')
+        ul
+
+      div(id='offline' role='tabpanel' class='tab-pane')
+        ul
+

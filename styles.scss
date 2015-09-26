@@ -1,0 +1,210 @@
+$display-width: 300px;
+$test-border: none;
+$box-border-radius: 3px;
+$witchy-green: #5C863C;
+$darker-green: #062010;
+
+body {
+  background:
+    url(https://s3-us-west-2.amazonaws.com/gmc-data/Misc/greenwitch_rev.jpg) 
+    no-repeat center center fixed;
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+h1 {
+  color: #D3E06A;
+  font-family: 'Fontdiner Swanky', cursive;
+  font-size: 2.1em;
+}
+
+.header {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+#display {
+  border-radius: 1em;
+  margin: auto;
+  padding: 0;
+  width: $display-width;
+  border: $test-border;
+}
+
+.little {
+  font-size: 0.6em;
+}
+
+.nav-tabs {
+  border-bottom-width: 0px;
+}
+
+.nav-tabs li.active a {
+  background-color: #663202;
+  border-color: #663202;
+  color: white;
+}
+
+.nav-tabs li a:hover {
+  background-color: #AA7646;
+  border-color: #AA7646;
+}
+
+.nav-tabs li.active a:hover {
+  background-color: #AA7646;
+  border-color: #AA7646;
+  color: white;
+}
+
+.nav-tabs li.active a:focus {
+  background-color: #663202;
+  border-color: #663202;
+  color: white;  
+}
+
+.nav-tabs li a {
+  background-color: #885424;
+  border-radius: 0;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.nav-tabs li:first-child a {
+  border-top-left-radius: $box-border-radius;
+  border-bottom-left-radius: $box-border-radius;
+}
+
+.nav-tabs li:last-child a {
+  border-top-right-radius: $box-border-radius;
+  border-bottom-right-radius: $box-border-radius;
+}
+
+.nav-tabs li.active:after {
+  content: ' ';
+  position: absolute;
+  top: 96%;
+  left: 40px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #663202 transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+}
+
+.search-container {
+  background: #000;
+  color: white;
+  padding: 2rem;
+}
+
+.inner-addon {
+  position: relative;
+}
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.left-addon .glyphicon { top: 20px; left: 20px; }
+
+input[type="text"] {
+  background: black;
+  color: white;
+  border: 2px solid $witchy-green;
+  border-radius: 20px;
+  font-size: 12px;
+  outline: none;
+  padding: 8px 8px 8px 30px;
+  width: 100%;
+}
+
+.tab-pane ul {
+  margin-top: .5em;
+}
+
+.tab-pane li {
+  border-radius: $box-border-radius;
+  position: relative;
+  width: $display-width;
+  height: 4em;
+  list-style-type: none;
+  background: linear-gradient(to bottom, $darker-green, $witchy-green);
+  left: -41px;
+  padding-left: .6em;
+  font-size: 1.2em;
+  margin-top: .2em;
+}
+
+.tab-pane li .name {
+  margin-left: 6rem;
+}
+
+.tab-pane li.streaming {
+  padding-top: .9em;
+}
+
+.tab-pane li.not-streaming,
+.tab-pane li.no-acct {
+  padding-top: 1.3em;
+}
+
+.tab-pane li.streaming:after {
+  content:"\2736";
+  font-size: 3rem;
+  color: #00ff2a;
+  position: absolute;
+  right: 11px;
+  bottom: 10px;
+}
+
+.tab-pane li.not-streaming:after {
+  content: '\26e7';
+  font-size: 3rem;
+  color: red;
+  position: absolute;
+  right: 7px;
+  bottom: 11px;
+}
+
+.tab-pane li.no-acct:after {
+  content: '\2620';
+  font-size: 3rem;
+  color: red;
+  position: absolute;
+  right: 11px;
+  bottom: 11px;
+}
+
+.tab-pane li a {
+  color: white;
+}
+
+.tab-pane li.streaming .stream-data {
+  color: white;
+  font-size: 10px;
+  margin-left: 6rem;
+}
+
+.tab-pane li .stream-logo {
+  background: #9DA13F;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 7px;
+}
+
+.stream-logo img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+img[src='null'] {
+  display: none;
+}
